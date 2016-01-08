@@ -1,0 +1,7 @@
+FILE(GLOB SOURCE_FILES *.cpp)
+
+find_package(Boost COMPONENTS system locale REQUIRED)
+
+ADD_EXECUTABLE (MyProject ${SOURCE_FILES} ${INCLUDE_FILES})
+
+TARGET_LINK_LIBRARIES( MyProject ${Boost_LIBRARIES} )
